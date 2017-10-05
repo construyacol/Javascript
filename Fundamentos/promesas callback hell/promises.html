@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	
+	var promise = new Promise(function(resolve, reject){
+
+		const FLAG=6;
+		if(FLAG == 5){
+			resolve("Todo salio Bien");//Función de respuesta para promesa resuelta
+		}
+		else{
+			reject(Error("Algo salio mal"));
+		}
+	})
+
+	promise.then(function(response){
+		console.log(response);
+	}, function(error){
+		console.log(error);
+	})
+
+</script>
+</body>
+</html>

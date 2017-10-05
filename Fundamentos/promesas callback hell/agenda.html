@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="agenda">ZzZ...</h1>
+<script>
+
+	const DESPERTAR = 3000;
+	const DUCHA= 2000;
+	const VESTIRSE = 2000;
+	const DESAYUNAR = 3000;
+	const PLATZI = 5000;
+	const $agenda = document.getElementById('agenda')
+
+	function despertar(){
+		return new Promise ((resolve, reject)=>{
+		 	setTimeout(()=>{
+				resolve('Ahora me estoy duchando')
+				// reject('A la mielda')
+			},DESPERTAR) 
+		})
+	}
+
+	function ducha(respuesta){
+		$agenda.textContent=respuesta
+		return new Promise ((resolve, reject)=>{
+		 	setTimeout(()=>{
+				resolve('Ahora me estoy vistiendo...')
+				// reject('A la mielda')
+			},DUCHA) 
+		})
+	}
+
+	function vestir(respuesta){
+		$agenda.textContent=respuesta
+		return new Promise ((resolve, reject)=>{
+		 	setTimeout(()=>{
+				resolve('Ahora estoy desayunando...')
+				// reject('A la mielda')
+			},VESTIRSE) 
+		})
+	}
+
+	function desayunar(respuesta){
+		$agenda.textContent=respuesta
+		return new Promise ((resolve, reject)=>{
+		 	setTimeout(()=>{
+				// resolve('Ahora estoy estudiando...')
+				reject('A la mielda')
+			},DESAYUNAR) 
+		})
+	}
+
+	function error(respuesta){
+		$agenda.textContent=respuesta
+	}
+
+	despertar()
+	.then(ducha)
+	.then(vestir)
+	.then(desayunar)
+	.catch(error)
+
+
+	// const despertar = new Promise((good, bad)=>{
+
+	// 	setTimeout(()=>{
+	// 		// good('Ahora me estoy duchando')
+	// 		bad('A la mielda')
+	// 	},DESPERTAR) 
+	// })
+
+	// despertar.then((good)=>{
+	// 	console.log(good)
+	// })
+	// .catch((bad)=>{
+	// 	console.log(bad)
+	// })
+
+</script>
+
+</body>
+</html>

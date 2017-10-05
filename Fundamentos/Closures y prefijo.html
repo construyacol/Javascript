@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	
+	function saludarFamilia(apellido){
+		return function saludarMiembroF(nombre){
+			console.log('Hola '+nombre+' '+apellido)
+		}
+	}
+
+	const saludarGomez = saludarFamilia("Gomez")
+	const saludarGarcia = saludarFamilia("Garcia")
+
+	saludarGomez("Pedro")
+	saludarGomez("Mary")
+	saludarGomez("Carlo")
+	saludarGomez("Julio")
+
+	saludarGarcia("Luis")
+	saludarGarcia("Andres")
+	saludarGarcia("Felipe")
+	saludarGarcia("Caliche")
+
+//Tambien podemos crear prefijos
+const preFijoIn = makePrefixer("in")
+preFijoIn("Creible")
+
+
+</script>
+
+</body>
+</html>

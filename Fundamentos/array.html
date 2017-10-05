@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+//Efectuamos una sumatoria de los elementos del array por medio de la función reduce
+
+function suma(...numeros){
+	return numeros.reduce(function (acum, numero){
+		acum += numero
+		return acum
+	}, 0)//comienza desde el indice 0 del array
+}
+suma(4,5,6,7,8)
+
+
+
+//Creamos una función que multiplique por 2 cada elemento del array
+function dobles(...numeros){
+    return numeros.map(function(numero){
+	return numero * 2
+	})
+}
+//Otra manera en que podemos hacerlo es de la siguiente
+function dobles(...numeros){
+    return numeros.map(numero=>	numero * 2)
+}	
+//Lo podemos hacer aún mas sencillo
+const dobles = (...numeros) => numeros.map(numero=>	numero * 2)
+
+
+
+//Creamos otra función para encontrar los numeros pares de un array
+function paress(...numeros){
+
+	return numeros.filter(function(numero){
+		return numero % 2 == 0
+	})
+}
+
+//Lo podemos reescribir con un arrow function de la siguiente manera:
+const pares = (...numeros) => numeros.filter(numero=> numero % 2 == 0)
+
+
+</script>
+
+
+</body>
+</html>

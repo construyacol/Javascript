@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="timer" >Han pasado 0 segundos</h1>
+<button id="cancelInterval">Cancel Interval</button>
+<h1 id="timeout" ></h1>
+<button id="cancel-timout">Cancel timout</button>
+<script>
+
+	//almacenamos en una constante el id del h1 con el que interactuaremos
+	const timer = document.getElementById('timer');
+	var tiempo = 0
+	const intervalo = setInterval(()=>{
+		tiempo++
+		timer.textContent='Han pasado '+tiempo+' segundos';
+	},1000)
+
+	//Creamos boton para cancelar intervalo
+	const canInterval= document.getElementById('cancelInterval');
+		canInterval.addEventListener('click', ()=>{
+		clearInterval(intervalo);
+	})
+
+
+
+
+
+	//Funciones inicializar y cancelar TimeOut
+
+	//Almacenamos en una constante el id del boton cancelar y creamos una funcion al hacer click en el boton
+	const canTimout = document.getElementById('cancel-timout');
+	canTimout.addEventListener('click', ()=>{
+		clearTimeout(timout);
+	})
+
+
+	//Creamos un timeOut
+	const timout = setTimeout(()=>{
+		alert('Han pasado 5 segundos');
+	},5000)
+
+
+</script>
+</body>
+</html>

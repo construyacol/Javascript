@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+
+class Persona {
+
+	constructor(nombre, amigos = []){
+		this.nombre = nombre
+		this.amigos = amigos
+	}
+
+	listarAmigos(){
+		const _this = this
+		this.amigos.forEach(function(amigo){
+
+			console.log('Hola, mi nombre es '+_this.nombre+' y soy amigo de '+amigo)
+
+		})
+	}
+}	
+
+const andres = new Persona('Andres',['Juan', 'Lucas', 'Pedro'])
+
+</script>
+
+</body>
+</html>

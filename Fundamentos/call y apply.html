@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+	
+	const andres = {
+		nombre: 'Andres',
+		apellido: 'Guevara',
+		hobby: 'Programar',
+		gusto: 'Indias'
+	}
+
+	function saludar(veces) {
+		for (let i=0;i<veces;i++){
+			console.log('Hola soy '+this.nombre+' '+this.apellido+' me gusta '+this.hobby+' y me encantan las '+this.gusto)
+		}
+	}
+
+	saludar.call(andres, 3)
+</script>
+
+</body>
+</html>

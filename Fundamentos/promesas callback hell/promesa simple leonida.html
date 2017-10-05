@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1 id="agenda">ZzZ...</h1>
+<script>
+
+	const DESPERTAR = 3000;
+	const DUCHA= 2000;
+	const VESTIRSE = 2000;
+	const DESAYUNAR = 3000;
+	const PLATZI = 5000;
+	const $agenda = document.getElementById('agenda')
+
+	const despertar = new Promise((good, bad)=>{
+
+		setTimeout(()=>{
+			// good('Ahora me estoy duchando')
+			bad('A la mielda')
+		},DESPERTAR) 
+	})
+
+	despertar.then((good)=>{
+		console.log(good)
+	})
+	.catch((bad)=>{
+		console.log(bad)
+	})
+
+</script>
+
+</body>
+</html>
