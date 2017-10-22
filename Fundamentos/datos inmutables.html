@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	let andres = {nombre:'Andres', apellido:'guevara', edad: 24}
+
+	let otroAndres = andres
+
+	otroAndres === andres
+
+	function cumpleanos(persona){
+		persona.edad++
+	}
+	
+	cumpleanos(andres)
+
+	cumpleanos = function (persona){
+		const clone = Object.assign({}, persona)
+		clone.edad++
+		return clone
+	}
+
+
+</script>
+</body>
+</html>

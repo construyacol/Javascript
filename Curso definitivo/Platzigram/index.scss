@@ -1,0 +1,106 @@
+$secondary-color: #125688;
+
+@import "node_modules/materialize-css/sass/materialize.scss";
+@import './loader';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.fuente{
+	font-family: 'Montserrat', sans-serif;
+}
+.iphone{
+	max-width: 100%;
+}
+.subti{
+	font-size: 22px;
+}
+.platzigram{
+	font-size: 55px;
+	font-family: 'Montserrat', sans-serif;
+	color: $secondary-color !important;
+}
+.header{
+	background-color:white;
+	color: $secondary-color;
+	box-shadow: none;
+}
+$avatar-size: 48px;
+.avatar{
+	width: $avatar-size;
+	height: $avatar-size;
+	border-radius: 50%;
+	float: left;
+	margin-right: 12px;
+}
+.contecora{
+	display: flex;
+    align-items: center;
+}
+
+.likes{
+	margin-left:10px;
+}
+.fa{
+	font-size: $avatar-size;
+}
+.card .fa-heart {
+	color: red;
+	/*display: none;*/
+}
+
+.cora{
+	cursor: pointer;
+}
+
+.card a:nth-child(2n+0){
+	display: none;
+}
+
+.form-upload{
+	span, button{
+		color: white;
+	}
+	.fileUpload{
+	 position: relative;
+	 overflow: hidden;
+	 margin:10px;	
+	}
+	input{
+		position: absolute;
+		top: 0;
+		bottom:0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		cursor:pointer;
+		opacity: 0;
+	}
+}
+
+.picture{
+	width:200px;
+	height:200px;
+	margin:10px;
+}
+.picture-container{
+	position:relative;
+}
+/*.picture:hover {
+	div{
+    opacity: 1;
+	}
+}*/
+
+.contenedor:hover .likes2{
+	opacity: 1;
+}
+
+.likes2{
+	position: absolute;
+    width: 100%;
+    top: calc(50% - 20px);
+    opacity: 0;
+    color: red;
+    transition: .2s;
+}
+

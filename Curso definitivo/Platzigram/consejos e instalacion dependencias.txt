@@ -1,0 +1,109 @@
+Consejos
+Es recomendable tener las librerías de estilos y metodos como materialize instalada directamente como dependencia en nuestro proyecto
+para esto en la consola lo hacemos de la siguiente manera:
+
+1. npm install materialize-css -s
+
+en este proyecto tambien utilizaremos un preprocesador de estilos SASS, lo hacemos por medio de gulp que es un automatizador de tareas, con el objetivo de separar las dependencias del
+ proyecto
+
+3. npm i --save-dev gulp gulp-sass 
+
+instalamos gulp de manera global para poder correrlo desde cualquier directorio con el siguiente comando:
+
+4. npm i -g gulp
+
+corremos gulp, lo que hará es ejecutar el archivo gulpfile.js donde especificamos las tareas anteriormente, escribimos en consola esto:
+
+5. gulp
+
+y el ultimo comando lo que va hacer es renombrar el archivo final
+
+6.npm i --save gulp rename
+
+utilizamos el preprocesador de html llamado jade, para instalarlo desde consola escribimos lo siguiente:
+
+7. npm install jade -s
+
+instalamos como dependencias de desarrollo tanto browserify como babel
+
+8.npm i --save-dev browserify babelify
+
+para que esto funcione debemos instalar source, para que gulp nos interprete los archivos, lo podemos instalar de la siguiente forma
+
+9. npm i --save-dev vinyl-source-stream
+
+agregamos una libreria llamada page.js inspirada en express que funciona como enrrutador del lado del cliente
+
+10.npm install --save page
+
+para automatizar los scripts y el levantamiento del server añadimos la seccion scripts en el package.json
+
+,
+  "scripts": {
+    "build": "gulp"
+  }
+
+luego en consola corremos el siguiente comando para automatizar la ejecución de gulp
+
+11. npm run build
+
+instalamos watchify en nuestro directorio node_modules para automatizar cualquier cambio dentro de nuestro prouyecto, no 
+olvidar los cambios del archivo gulpfile.js
+
+12.npm i --save-dev watchify
+
+en el package.json dentro de scripts escibimos lo siguiente para ejecutar la actualización de archivos automatica 
+y el levantamiento del server en paralelo
+
+"start": "gulp watch || node server.js"
+
+instalamos yoyo una libreria similar a react UI
+
+13. npm install --save yo-yo   o  npm i -s yo-yo
+
+instalamos otra librería llamada empty-element que funciona para seleccionar un elemento del DOM y borrar todos los  
+elementos que contiene dentro
+
+14. npm i -s empty-element
+
+instalamos una librería llamada Moment.js es una librería que nos ofrece diferentes formas de agregar fechas, desde el tradicional 
+formato 24 horas hasta las fechas relativas (Hace x tiempo), se instala con el siguiente comando:
+
+npm i -s moment 
+
+
+format js permite internacionalizar las fechas y los textos con el siguiente comando por npm
+
+npm install intl-relativeformat --save
+
+
+Respuestas API servidor http require:
+
+podemos utilizar superagent, axios instalandolos con los siguientes comandos
+
+npm install --save superagent
+npm install --save axios
+
+para hacerlo por medio de async / await debemos incluir las siguientes librerias
+
+npm i --save-dev babel-plugin-syntax-async-functions 
+npm i --save-dev babel-plugin-transform-regenerator
+npm i --save-dev babel-preset-es2015 
+
+npm i --save-dev babel-plugin-syntax-async-functions babel-plugin-transform-regenerator babel-preset-es2015 
+
+
+Multer es un middleware node.js para el manejo multipart/form-data, que se utiliza principalmente para cargar archivos.
+Está escrito en la parte superior de busboy para la máxima eficiencia.
+
+npm install --save multer
+
+esto lo complementamos con otra librería que asigna la extensión de los archivos con el siguiente comando
+
+npm i --save file-extension
+
+
+tambien podemos descargar otro middleware express de node para el manejo multipart/form-data para la carga de archivos, este se llama formidable y se instala asi
+
+npm install --save express-formidable

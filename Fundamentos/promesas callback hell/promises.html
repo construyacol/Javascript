@@ -8,17 +8,21 @@
 	
 	var promise = new Promise(function(resolve, reject){
 
-		const FLAG=6;
+		const FLAG=5;
 		if(FLAG == 5){
-			resolve("Todo salio Bien");//Función de respuesta para promesa resuelta
+			resolve();//Función de respuesta para promesa resuelta
 		}
 		else{
 			reject(Error("Algo salio mal"));
 		}
 	})
 
-	promise.then(function(response){
-		console.log(response);
+    function hola(){
+    	console.log("epaaaaa");
+    }
+
+	promise.then(function(){
+		hola();
 	}, function(error){
 		console.log(error);
 	})

@@ -1,0 +1,38 @@
+{
+  "name": "platzigram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "express": "^4.16.1",
+    "express-formidable": "^1.0.0",
+    "file-extension": "^3.1.2",
+    "jade": "^1.11.0",
+    "materialize-css": "^0.100.2",
+    "moment": "^2.19.1",
+    "multer": "^1.3.0",
+    "page": "^1.7.1",
+    "rename": "^1.0.4",
+    "superagent": "^3.6.3",
+    "yo-yo": "^1.4.1"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  },
+  "scripts": {
+    "build": "gulp",
+    "start": "gulp watch | node server.js",
+    "parcero": "gulp | node server.js"
+  }
+}

@@ -1,0 +1,26 @@
+html
+  head
+     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+     link(rel='apple-touch-icon', href='favicon.png')
+     link(rel='stylesheet' type='text/css' href='estilos.css') 
+     meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+     meta(charset='utf-8')
+     title=title 
+  body
+    section#main-container
+     .container
+       .row
+        .col.s12.l3.center-align
+
+    a.dropdown-button.btn(href='#', data-activates='dropdown1') Idioma
+    ul#dropdown1.dropdown-content
+      li
+           a(href='#!') Español
+      li
+          a(href='#!') Inglés
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js')
+script(src='app.js')
+script(src='functions.js')
+

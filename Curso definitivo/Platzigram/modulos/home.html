@@ -1,0 +1,90 @@
+<div id="feed">
+
+<div>
+	<nav class="header">
+		<div class="nav-wrapper">
+		  <div class="container">
+		  	<div class="row">
+		  		<div class="col s12 m6 offset-m1">
+		  			<a href="/" class="brand-logo platzigram">Platzigram</a>
+		  		</div>
+		  		<div class="col s2 m6 push-m10 push-s10">
+		  			<a href="#" class="btn btn-large btn-flat dropdown-button" data-activates="drop-user">
+		  				<i class="fa fa-user" aria-hidden="true"></i>
+		  			</a>
+		  			<ul id="drop-user" class="dropdown-content">
+		  				<li><a href="#">Salir</a></li>
+		  				<li></li>
+		  			</ul>
+		  		</div>
+		  	</div>
+		  </div>
+		</div>
+	</nav>
+<div class="content">
+  <div class="container timeline">
+  <div class="row">
+  	<div class="col s12 m10 offset-m1 l8 offset-12 center-align">
+		<form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit="onsubmit();">
+			<div id="fileName" class="fileUpload btn btn-flat cyan">
+				<span><i class="fa fa-camera" aria-hidden="true"></i>Subir imagen</span>
+				<input type="file" name="picture" id="file" class="upload" onchange="onChange();"/>
+			</div>
+			<button id="btnUpload" type="submit" class="btn btn-flat cyan hide">SUBIR</button>
+			<button id="btnCancel" type="button" class="btn btn-flat red hide" onclick="cancelar();"><i class="fa fa-times" aria-hidden="true"></i></button>
+		</form>  		
+  	</div>
+  </div>
+  <div class="row">
+	  <div clas="col s12 m10 offset-m1 l6 offset-l3" id="card-aqui">
+	  	
+
+
+	  </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<div id="perfil">
+	
+	<div class="container userpage">
+	  		  	<div class="row">
+	  		  		<div class="col s12 m10 offset-m1 offset-l2 center-align heading">
+	  		  		  <div class="row">
+		  		  		  <div class="col s12 m10 offset-m1 l3 offset-l3 center">
+		  		  		  	 <img src="" class="responsive-img circle" id="imgUser">
+		  		  		  </div>
+		  		  		  <div class="col s12 m10 offset-m1 l6 left-align">
+		  		  		  	<h2 class="center" id="nameUser">Nombre usuario</h2>
+		  		  		  </div>		  		  
+	  		  		  </div>
+	  		  		</div>
+	  		  		<div class="row" id="userPic">
+
+	  		  		</div>
+	  		  	</div>
+			  </div>
+</div>
+
+<!--  <div class="card" id="card">
+<div id="nombre">ssas</div>
+    <div class="card-image">
+      <img class="activator">
+    </div>
+    <div class="card-content">
+      <a href="/user/${picture.user.username}" class="card-title ">
+        <img src="${picture.user.avatar}" class="avatar">
+        <span class="username">${picture.user.username}</span>
+      </a>
+      <small class="right time">${moment(picture.createdAt).fromNow()}</small>
+      <div class="contecora">
+        <a class="left" id="like" href="#" onclick=${like}><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+        <a class="left" id="dislike" href="#" onclick=${dislike}><i class="fa fa-heart" aria-hidden="true"></i></a>
+        <span class="left likes">${picture.likes} me gusta</span>
+      </div>
+    </div>
+  </div> -->
